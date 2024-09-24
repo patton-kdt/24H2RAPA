@@ -22,5 +22,7 @@ esxi_username: "root"
 public_net: "VM-203.244.146"
 private_net: "{{ student_ID }}-Trunk"
 
-datastore_name: "Local-05"
+datastore_name: "Local-06"
 iso_folder: "[{{ datastore_name }}]\\ISO\\"
+
+my_router_ip : "203.244.146.190"
