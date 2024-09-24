@@ -1,0 +1,26 @@
+ansible_python_interpreter: /bin/python3
+
+student_ID: "S00"
+
+vcenter_hostname: "vcsa.vclass.rapa"
+vcenter_username: "S00@vclass.rapa"
+vcenter_password: "VMware1!"
+
+datacenter_name: "Daegu-Univ"
+folder_prefix: "{{datacenter_name}}/vm/3.Students/"
+
+# S01, S02, S03, S04 --> esxi_host : esxi-01.vclass.rapa
+# S05, S06, S07, S08 --> esxi_host : esxi-02.vclass.rapa
+# S09, S10, S11, S12 --> esxi_host : esxi-03.vclass.rapa
+# S13, S14, S15, S16 --> esxi_host : esxi-04.vclass.rapa
+# S17, S18, S19, S20 --> esxi_host : esxi-05.vclass.rapa
+
+esxi_hostname: "esxi-06.vclass.rapa"
+esxi_password: "VMware1!"
+esxi_username: "root"
+
+public_net: "VM-203.244.146"
+private_net: "{{ student_ID }}-Trunk"
+
+datastore_name: "Local-05"
+iso_folder: "[{{ datastore_name }}]\\ISO\\"
